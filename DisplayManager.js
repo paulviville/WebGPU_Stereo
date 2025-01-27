@@ -60,11 +60,16 @@ export class DisplayManager {
 		console.log(this)
 		// this.guiUniforms = this.gui.addFolder("uniforms");
 		console.log(this.gui.add(this, "activeStereo"));
+		console.log(this.gui.add(this, "flipView"));
 		// this.guiUniforms.add(this.uniformParams, 'min_dist').name("min dist").min(0.05).max(1.0).step(0.05);
 		// this.guiUniforms.add(this.uniformParams, 'max_dist').name("max dist").min(1.05).max(40.0).step(0.05);
 		// this.guiUniforms.add(this.uniformParams, 'max_steps').name("max steps").min(10).max(200).step(1);
 		// this.guiUniforms.add(this.uniformParams, 'max_steps_2nd').name("max steps 2nd").min(5).max(100).step(1);
 
+	}
+
+	flipView() {
+		this.left = !this.left;
 	}
 
 	#initializeViewQuad() {
